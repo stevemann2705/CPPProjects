@@ -1,5 +1,6 @@
 #include "stdafx.h"
 #include <iostream>
+#include <stdlib.h>
 
 using namespace std;
 
@@ -29,8 +30,10 @@ public:
 	}
 
 	item operator *(int a){
-		x=x*a;
-		y=y*a;
+		item t;
+		t.x=x*a;
+		t.y=y*a;
+		return(t);
 	}
 
 	friend item operator *(int a, item c);
@@ -58,8 +61,8 @@ int _tmain(int argc, _TCHAR* argv[])
 	i1 = i2 * 3;
 	i1.display();
 
-	item i4 = 3*i2;
+	item i4 = 3*i3;
 	i4.display();
+	system("pause");
 	return 0;
 }
-
