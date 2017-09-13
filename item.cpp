@@ -43,7 +43,10 @@ public:
 };
 
 item operator *(int a, item c){
-	return a*c.x;
+	item temp;
+	temp.x = a*c.x;
+	temp.y = a*c.y;
+	return(temp);
 }
 
 int _tmain(int argc, _TCHAR* argv[])
