@@ -33,16 +33,16 @@ public:
 		y=y*a;
 	}
 
-	friend int operator *(int a, item c);
+	friend item operator *(int a, item c);
 
 	void display(){
 		cout << "x=" << x << endl;
 		cout << "y=" << y << endl;
 	}
 
-}
+};
 
-int operator *(int a, item c){
+item operator *(int a, item c){
 	return a*c.x;
 }
 
@@ -55,7 +55,8 @@ int _tmain(int argc, _TCHAR* argv[])
 	i1 = i2 * 3;
 	i1.display();
 
-	cout << 2*i3;
+	item i4 = 3*i2;
+	i4.display();
 	return 0;
 }
 
